@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+    <context:annotation-config></context:annotation-config>
+    <context:component-scan base-package="com.springevents.ques2"/>
+
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/springtransaction" />
+        <property name="username" value="root" />
+        <property name="password" value="tiger" />
+    </bean>
+    <bean id="atmDao" class="com.springevents.ques2.AtmDaoImpl">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <bean name="smsEventListener" class="com.springevents.ques2.SmsListener">
+ <!--   <constructor-arg  value="1000"/> -->
+    </bean>
+   <bean name="smsEventPublisher" class="com.springevents.ques2.SmsPublisher"/>
+    <bean name="changePinListener" class="com.springevents.ques2.ChangePinListener"/>
+    <bean name="changePinPublisher" class="com.springevents.ques2.ChangePinPublisher"/>
+    <bean name="changeMobileListener" class="com.springevents.ques2.ChangeMobileListener"/>
+    <bean name="changeMobilePublisher" class="com.springevents.ques2.ChangeMobilePublisher"/>
+
+</beans>

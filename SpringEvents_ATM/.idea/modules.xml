@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringEvents_ATM.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringEvents_ATM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringEvents_ATM_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringEvents_ATM_main.iml" group="SpringEvents_ATM" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringEvents_ATM_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringEvents_ATM_test.iml" group="SpringEvents_ATM" />
+    </modules>
+  </component>
+</project>
